@@ -12,7 +12,8 @@ router.post('/encrypt', (req, res) => {
 
 router.post('/decrypt', (req, res) => {
   console.log("chegou aqui", req.body);
-  const { encryptedData } = req.body
+  // const { encryptedData } = req.body
+  const encryptedData = req.body
   console.log(encryptedData)
   const data = decryptData(encryptedData)
   res.json({ data })
